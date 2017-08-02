@@ -17,16 +17,16 @@ section {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
 }
 
 .pixel {
-  background: red;
+  background: #eee;
 }
 
-.pixel:nth-child(odd) {
-  background: blue;
+.active {
+  background: #42ebf4;
 }
-
 
 footer {
   border-top: 1px solid #ddd;

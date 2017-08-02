@@ -4,5 +4,8 @@ $(document).ready(function(){
     $('#drawing-area').append("<div class='pixel'></div>");
   }
 
+  $('.pixel').mouseenter(function(){
+    $(this).addClass('active');
+  });
 
 });
