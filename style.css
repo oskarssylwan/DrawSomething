@@ -4,9 +4,24 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: sans-serif;
+  opacity: 0;
+}
+
 header {
   text-align:center;
-  padding:50px;
+  padding:60px;
+}
+
+h1 {
+  font-family: 'Bad Script', cursive;
+  font-size: 2.5em;
+}
+
+p {
+  margin-top:10px;
+  color: ##606060;
 }
 
 section {
@@ -15,23 +30,38 @@ section {
 
   margin:0 auto;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 5px;
+  grid-template-columns: repeat(50, 1fr);
+  grid-template-rows: repeat(25, 1fr);
+  grid-gap: 8px;
 }
 
 .pixel {
   background: #eee;
+  /*border-radius: 50%;*/
 }
 
 .active {
   background: #42ebf4;
+  /*box-shadow: 0 0 5px 1px #42ebf4;*/
 }
 
 footer {
   border-top: 1px solid #ddd;
   width: 900px;
-  margin: 0 auto;
+  margin: 70px auto;
+  padding-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  color: #727272;
+}
+
+/*.options-link {
+  opacity: 0;
+}*/
+
+.options-link:hover {
+  color: black;
+
 }
 
 footer ul {
@@ -40,4 +70,5 @@ footer ul {
 
 footer ul li {
   display: inline-block;
+  margin-left: 5px;
 }
