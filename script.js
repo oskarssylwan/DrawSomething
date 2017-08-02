@@ -10,6 +10,10 @@ $(document).ready(function(){
     $(this).addClass('active');
   });
 
+  $('.reset').on('click', function(){
+    $('.pixel').removeClass('active');
+  });
+
 
 
 });
