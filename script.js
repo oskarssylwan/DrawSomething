@@ -6,8 +6,8 @@ $(document).ready(function(){
     $('#drawing-area').append("<div class='pixel'></div>");
   }
 
-  $('.pixel').mouseenter(function(){
-    $(this).addClass('active');
+  $('.pixel').on('mouseenter', function(){
+    ChangeColor();
   });
 
   $('.reset').on('click', function(){
@@ -15,5 +15,16 @@ $(document).ready(function(){
   });
 
 
+
+//--------Events------------
+
+
+
+
+//--------Functions---------
+  function ChangeColor(){
+    // $(domObject).addClass('.active');
+    console.log('is this shit working?');
+  };
 
 });
