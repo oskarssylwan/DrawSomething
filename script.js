@@ -28,6 +28,11 @@ $('.default').click(function() {
   activeColor = defaultColor;
 });
 
+$('.grayscale').click(function() {
+  resetPixels();
+  activeColor = 'grayscale';
+});
+
 // --------- FUNCTIONS ----------
 
 
@@ -40,11 +45,14 @@ function buildDrawingBoard() {
 function addColor(domObject, color) {
   switch (color) {
     case 'random':
-      domObject.css('background', randomColor());
+      color = randomColor();
       break;
-    default:
-      domObject.css('background', color);
+    case 'grayscale':
+      color = grayscale(domObject);
+      break;
+
   }
+  domObject.css('background', color);
 }
 
 function resetPixels() {
@@ -56,6 +64,16 @@ function randomColor() {
           + randomNumber(255) + ","
           + randomNumber(255) + ")";
 }
+
+function grayscale(domObject) {
+  var rgbValue = parseInt(domObject.css('background-color').substr(4, 3));
+  rgbValue -= 40;
+  if (rgbValue < 0 ) {rgbValue = 0}
+  return "rgb(" + rgbValue + ","
+                + rgbValue + ","
+                + rgbValue + ")";
+}
+
 
 function randomNumber(upperLimit) {
   return Math.floor(Math.random() * upperLimit);
